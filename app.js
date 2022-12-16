@@ -4,68 +4,57 @@
 
 /* -------------------------------------------------------- */
 
-const NAME = "Reyes";
+const NAME = "Spot";
+const PREFIX = "@";
+const DISTRO = "archlinux";
+const SUFIX = "~$"
 
 const CARDS = [
   {
     name: "Discord",
     icon: "ri-discord-fill",
     link: "https://discord.com/app",
-    color: "#5865F2",
+    color: "#738adb"
   },
   {
-    name: "Reddit",
+    name: "LibReddit",
     icon: "ri-reddit-fill",
-    link: "https://www.reddit.com/",
-    color: "#FF4500",
-  },
-  {
-    name: "Figma",
-    icon: "ri-pen-nib-fill",
-    link: "https://www.figma.com/",
+    link: "https://libreddit.domain.glass/",
+    color: "#FF4500"
   },
   {
     name: "Github",
     icon: "ri-github-fill",
-    link: "https://github.com/",
-  },
-  {
-    name: "Twitter",
-    icon: "ri-twitter-fill",
-    link: "https://twitter.com",
-    color: "#1DA1F2",
-  },
-  {
-    name: "Dribbble",
-    icon: "ri-dribbble-fill",
-    link: "https://dribbble.com/",
-    color: "#ea4c89",
-  },
-  {
-    name: "Hashnode",
-    icon: "ri-newspaper-line",
-    link: "https://hashnode.com/",
-  },
-  {
-    name: "CodeSandbox",
-    icon: "ri-braces-fill",
-    link: "https://codesandbox.io/dashboard/",
+    link: "https://github.com/SpotechYT",
   },
   {
     name: "YouTube",
     icon: "ri-youtube-fill",
-    link: "https://www.youtube.com/",
-    color: "#FF0000",
+    link: "https://youtube.com/",
+    color: "#FF0000"
   },
   {
-    name: "LinkedIn",
-    icon: "ri-linkedin-fill",
-    link: "https://www.linkedin.com/",
+    name: "Spotify",
+    icon: "ri-spotify-fill",
+    link: "https://open.spotify.com/",
+    color: "#1DB954"
   },
   {
-    name: "Gmail",
-    icon: "ri-google-fill",
-    link: "https://mail.google.com/",
+    name: "Thingiverse",
+    icon: "ri-t-box-fill",
+    link: "https://thingiverse.com/",
+    color: "#248BFB"
+  },
+  {
+    name: "Unsplash",
+    icon: "ri-unsplash-fill",
+    link: "https://unsplash.com/",
+  },
+  {
+    name: "Spotaviolet",
+    icon: "ri-server-fill",
+    link: "https://spotavioletproxy.up.railway.app/",
+    color: "#262262"
   },
 ];
 
@@ -107,7 +96,8 @@ const updateDate = () => {
   // Time Variables
   let currentHour = formatDigit(completeDate.getHours());
   let currentMinute = formatDigit(completeDate.getMinutes());
-
+  let currentSeccond = formatDigit(completeDate.getSeconds());
+  
   // Date Variables
   let currentDay = completeDate.getDay();
   let currentNumber = completeDate.getDate();
@@ -117,7 +107,7 @@ const updateDate = () => {
   // Update the Time
   currentTime.innerHTML = `${
     currentHour % 12 == 0 ? "12" : currentHour % 12
-  }:${currentMinute} ${currentHour > 11 ? "PM" : "AM"}`;
+  }:${currentMinute}:${currentSeccond} ${currentHour > 11 ? "PM" : "AM"}`;
 
   // Update the Date
   currentDate.innerHTML = `${DAYS[currentDay]} ${currentNumber}, ${MONTHS[currentMonth]} ${currentYear}`;
@@ -234,5 +224,6 @@ const printCards = () => {
 /****************/
 
 userName.innerHTML = NAME;
+userTitle.innerHTML = NAME + PREFIX + DISTRO + SUFIX;
 printCards();
 updateDate();
