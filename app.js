@@ -2,8 +2,6 @@
 /* EDITABLE INFO */
 /*****************/
 
-/* -------------------------------------------------------- */
-
 const NAME = "Spot";
 const PREFIX = "@";
 const DISTRO = "archlinux";
