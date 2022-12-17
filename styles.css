@@ -183,6 +183,7 @@ footer > a:hover {
   border-radius: 60px;
   padding: 10px 10px;
   margin-top: 25px;
+  color: var(--text-light);
 }
 
 .searchbar input{
