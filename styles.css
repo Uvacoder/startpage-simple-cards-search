@@ -5,6 +5,7 @@
   --text-light: #eeeeee;
   --background: #0d1b2a;
   --background-light: #1b263b;
+  --icon-background: #273145;
 }
 
 *,
@@ -39,7 +40,7 @@ h1 > span {
 }
 
 main {
-  margin-top: 4rem;
+  margin-top: 1rem;
 
   display: flex;
   flex-wrap: wrap;
@@ -165,4 +166,50 @@ footer > a:hover {
   left: 50%;
 
   transition: 0.1s;
+}
+
+.searchbarContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar{
+  width: 100%;
+  max-width: 700px;
+  background: var(--background-light);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 10px;
+  margin-top: 25px;
+}
+
+.searchbar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 5px 20px;
+  font-size: 20px;
+}
+
+.searchbar button{
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: var(--icon-background);
+}
+
+.searchbar button i{
+  font-size: 20px;
+}
+
+.searchbar:hover{
+  border-color: var(--primary);
+}
+
+.searchbar:focus{
+  border-color: var(--primary);
 }
